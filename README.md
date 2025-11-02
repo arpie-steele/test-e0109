@@ -33,4 +33,4 @@ However, opening `src/main.rs` in VSCode with rust-analyzer shows 3 E0109 errors
 
 ## Related Issue
 
-This repository serves as a minimal reproduction for rust-analyzer issue [link to be added].
+This repository serves as a minimal reproduction for rust-analyzer issue [#20958](https://github.com/rust-lang/rust-analyzer/issues/20958).
