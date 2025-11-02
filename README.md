@@ -13,6 +13,8 @@ When using a macro to generate trait implementations with const generics, rust-a
 - The code runs correctly with `cargo run`
 - The expanded macro produces valid Rust code
 
+The compiler seems to evade the problem by pre-parsing the tokens of the macro, while direct string substitution looks like we are treating the primitive type as a generic.
+
 ## Reproduction
 
 ```bash
@@ -20,7 +22,7 @@ cargo +1.77 check  # ✅ Compiles successfully
 cargo +1.77 run    # ✅ Runs and passes all assertions
 ```
 
-However, opening `src/main.rs` in VSCode with rust-analyzer shows E0109 errors on lines 28-31.
+However, opening `src/main.rs` in VSCode with rust-analyzer shows 3 E0109 errors on the 3 lines 42-44.
 
 ## Environment
 
